@@ -58,13 +58,14 @@ body {
 }
 
 .nav-link:hover {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .nav-link img {
     width: 128px;
     height: 128px;
-    border-radius: 5px;
+    border-radius: 18%;
+    background-color: black;
 }
 
 .nav-link span {

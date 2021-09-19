@@ -28,17 +28,18 @@ new Vue({
   },
   methods: {
     bing() {
+      let _this = this;
       axios({
         method: 'get',
         url: 'http://nas.xanderye.cn:8081/tool/image/bingDaily'
       }).then(function (res) {
         if (res.data.code === 0) {
-          this.bingImageUrl = res.data.data;
-          sessionStorage.setItem("bingImageUrl", this.bingImageUrl);
+          _this.bingImageUrl = res.data.data;
+          sessionStorage.setItem("bingImageUrl", _this.bingImageUrl);
         } else {
-          this.bingImageUrl = "url ('img/WindowsTerminal.png')";
+          _this.bingImageUrl = "url ('img/WindowsTerminal.png')";
         }
-        this.renderBackground();
+        _this.renderBackground();
       });
     },
     renderBackground() {
