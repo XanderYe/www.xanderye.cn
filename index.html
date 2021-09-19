@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="icon" href="img/favicon.ico" sizes="32x32"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>XanderYe的导航页</title>
+</head>
+<body>
+<div id="app" v-cloak>
+    <div id="container">
+        <div id="top">
+            <div id="logo">
+                <img id="logo-img" src="img/logo.png"/>
+            </div>
+            <div id="title"><span>XanderYe</span></div>
+        </div>
+        <div id="nav">
+            <a target="_blank" class="nav-link" v-for="item in (isInternet ? outerLinks : innerLinks)" :key="item.link" :href="item.link">
+                <img :src="item.image"/>
+                <span>{{item.name}}</span>
+            </a>
+            <em class="nav-link"></em>
+            <em class="nav-link"></em>
+            <em class="nav-link"></em>
+            <em class="nav-link"></em>
+            <em class="nav-link"></em>
+            <em class="nav-link"></em>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/index.js"></script>
+</html>
