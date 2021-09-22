@@ -24,6 +24,54 @@ body {
     width: 1024px;
 }
 
+#outer-inner-btn {
+    float: right;
+    margin-right: 10px;
+}
+
+#toggle-button{
+    display: none;
+}
+.button-label{
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 28px;
+    background-color: #ccc;
+    box-shadow: #ccc 0 0 0 2px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.circle{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.button-label .text {
+    line-height: 28px;
+    font-size: 18px;
+    text-shadow: 0 0 2px #ddd;
+}
+
+.on { color: #fff; display: none; text-indent: -20px;}
+.off { color: #fff; display: inline-block; text-indent: 25px;}
+.button-label .circle{
+    left: 0;
+    transition: all 0.3s;
+}
+#toggle-button:checked + label.button-label .circle{
+    left: 48px;
+}
+#toggle-button:checked + label.button-label .on{ display: inline-block; }
+#toggle-button:checked + label.button-label .off{ display: none; }
+#toggle-button:checked + label.button-label{
+    background-color: #009688;
+}
+
 #top {
     text-align: center;
 }
@@ -52,6 +100,7 @@ body {
 .nav-link {
     width: 130px;
     margin: 10px 15px 20px 15px;
+    text-decoration: none;
     -webkit-transition: margin 0.2s ease-out;
     -moz-transition: margin 0.2s ease-out;
     -o-transition: margin 0.2s ease-out;
@@ -87,6 +136,26 @@ body {
     #container {
         width: 100%;
     }
+
+    .button-label {
+        width: 62px;
+        height: 22px;
+    }
+    .button-label .text {
+        line-height: 20px;
+        font-size: 14px;
+        text-shadow: 0 0 2px #ddd;
+    }
+    .circle {
+        width: 21px;
+        height: 21px;
+    }
+    #toggle-button:checked + label.button-label .circle {
+        left: 40px
+    }
+    .on { color: #fff; display: none; text-indent: -20px;}
+    .off { color: #fff; display: inline-block; text-indent: 18px;}
+
     .nav-link {
         width: 68px;
         margin: 8px 8px 16px 8px;

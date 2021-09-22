@@ -11,6 +11,16 @@
 <div id="app" v-cloak>
     <div id="container">
         <div id="top">
+            <div style="height: 33px;">
+                <div id="outer-inner-btn" @click="changeStatus">
+                    <input type="checkbox" id="toggle-button" name="switch" :checked="!isInternet">
+                    <label class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">内网</span>
+                        <span class="text off">外网</span>
+                    </label>
+                </div>
+            </div>
             <div id="logo">
                 <img id="logo-img" src="img/logo.png"/>
             </div>

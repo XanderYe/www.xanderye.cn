@@ -2,13 +2,24 @@ new Vue({
   el: "#app",
   data() {
     return {
-      bingImageUrl: null,
+      bingImageUrl: "img/bing.jpg",
+      defaultImageUrl: "img/WindowsTerminal.png",
       isInternet: true,
       outerLinks: [
         {
           name: "我的博客",
           image: "img/logo.png",
-          link: "https://www.xanderye.cn/"
+          link: "https://wp.xanderye.cn/"
+        },
+        {
+          name: "工具小站",
+          image: "img/logo.png",
+          link: "https://tool.xanderye.cn/"
+        },
+        {
+          name: "QNAP",
+          image: "img/qnap.png",
+          link: "https://nas.xanderye.cn:5001/"
         },
         {
           name: "家庭影院",
@@ -16,46 +27,53 @@ new Vue({
           link: "https://nas.xanderye.cn:8920/"
         },
         {
-          name: "工具小站",
-          image: "img/logo.png",
-          link: "http://tool.xanderye.cn/"
+          name: "Transmission",
+          image: "img/transmission.jpg",
+          link: "http://nas.xanderye.cn:9091/transmission/web/"
+        },
+        {
+          name: "Github",
+          image: "img/github.jpg",
+          link: "https://github.com/XanderYe"
         },
       ],
       innerLinks: [
-
+        {
+          name: "爱快",
+          image: "img/ikuai.png",
+          link: "http://192.168.31.1/"
+        },
+        {
+          name: "家庭影院",
+          image: "img/jellyfin.png",
+          link: "http://192.168.31.2:8096/"
+        },
+        {
+          name: "Transmission",
+          image: "img/transmission.jpg",
+          link: "http://192.168.31.2:9091/transmission/web/"
+        },
       ]
     }
   },
   methods: {
-    bing() {
-      let _this = this;
-      axios({
-        method: 'get',
-        url: 'http://nas.xanderye.cn:8081/tool/image/bingDaily'
-      }).then(function (res) {
-        if (res.data.code === 0) {
-          _this.bingImageUrl = res.data.data;
-          sessionStorage.setItem("bingImageUrl", _this.bingImageUrl);
-        } else {
-          _this.bingImageUrl = "url ('img/WindowsTerminal.png')";
-        }
-        _this.renderBackground();
-      });
-    },
     renderBackground() {
+      let date = new Date();
+      let timestamp = date.getFullYear() + "" + (date.getMonth() + 1) + "" + date.getDate();
+      this.bingImageUrl += "?r=" + timestamp;
       document.body.style['background-image'] = "url('" + this.bingImageUrl + "')";
     },
+    changeStatus() {
+      this.isInternet = !this.isInternet;
+      localStorage.setItem('isInternet', this.isInternet);
+    }
   },
   mounted() {
 
   },
   created() {
-    const bgUrl = sessionStorage.getItem("bingImageUrl");
-    if (bgUrl) {
-      this.bingImageUrl = bgUrl;
-      this.renderBackground();
-    } else {
-      this.bing();
-    }
+    const localStatus = localStorage.getItem("isInternet");
+    this.isInternet = !(localStatus == 'false');
+    this.renderBackground();
   }
 })
