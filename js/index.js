@@ -23,7 +23,7 @@ new Vue({
         },
         {
           name: "家庭影院",
-          image: "img/jellyfin.png",
+          image: "img/emby.png",
           link: "https://nas.xanderye.cn:8920/"
         },
         {
@@ -45,7 +45,7 @@ new Vue({
         },
         {
           name: "家庭影院",
-          image: "img/jellyfin.png",
+          image: "img/emby.png",
           link: "http://192.168.31.2:8096/"
         },
         {
