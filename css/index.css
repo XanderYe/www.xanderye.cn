@@ -101,6 +101,7 @@ body {
     width: 130px;
     margin: 10px 15px 20px 15px;
     text-decoration: none;
+    text-align: center;
     -webkit-transition: margin 0.2s ease-out;
     -moz-transition: margin 0.2s ease-out;
     -o-transition: margin 0.2s ease-out;
@@ -120,7 +121,6 @@ body {
 .nav-link span {
     display: block;
     color: white;
-    text-align: center;
     height: 32px;
     text-shadow: 0 0 10px #111;
     font-weight: 400;
