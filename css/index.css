@@ -20,7 +20,7 @@ body {
 
 #container {
     margin: 0 auto;
-    padding-top: 10%;
+    padding-top: 8%;
     width: 1024px;
 }
 
@@ -95,6 +95,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 16px;
+    margin-top: 2%;
 }
 
 .nav-link {
