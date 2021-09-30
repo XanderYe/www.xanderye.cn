@@ -2,7 +2,7 @@ new Vue({
   el: "#app",
   data() {
     return {
-      bingImageUrl: "img/bing.jpg",
+      bingImageUrl: "bing/bing.jpg",
       defaultImageUrl: "img/WindowsTerminal.png",
       isInternet: true,
       outerLinks: [
@@ -35,6 +35,11 @@ new Vue({
           name: "Github",
           image: "img/github.jpg",
           link: "https://github.com/XanderYe"
+        },
+        {
+          name: "Docker",
+          image: "img/docker.jpg",
+          link: "https://hub.docker.com/u/xanderye"
         },
       ],
       innerLinks: [
