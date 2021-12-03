@@ -32,6 +32,11 @@ new Vue({
           link: "http://nas.xanderye.cn:9091/transmission/web/"
         },
         {
+          name: "百度这么难吗？",
+          image: "img/baidu.jpg",
+          link: "https://baidu.xanderye.cn/"
+        },
+        {
           name: "Github",
           image: "img/github.jpg",
           link: "https://github.com/XanderYe"
