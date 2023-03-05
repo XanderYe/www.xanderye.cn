@@ -51,17 +51,32 @@ new Vue({
         {
           name: "爱快",
           image: "img/ikuai.png",
-          link: "http://192.168.31.1/"
+          link: "https://192.168.31.1:90/"
+        },
+        {
+          name: "Openwrt",
+          image: "img/openwrt.png",
+          link: "http://192.168.31.254/cgi-bin/luci/"
+        },
+        {
+          name: "PVE",
+          image: "img/pve.png",
+          link: "https://192.168.31.253:8006/"
         },
         {
           name: "家庭影院",
           image: "img/emby.png",
-          link: "http://192.168.31.2:8096/"
+          link: "https://192.168.31.2:8920/"
         },
         {
           name: "Transmission",
           image: "img/transmission.jpg",
           link: "http://192.168.31.2:9091/transmission/web/"
+        },
+        {
+          name: "Jenkins",
+          image: "img/jenkins.png",
+          link: "http://192.168.31.3:9080/"
         },
       ]
     }
