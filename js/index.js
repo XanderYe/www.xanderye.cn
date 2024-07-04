@@ -17,8 +17,8 @@ new Vue({
           link: "https://tool.xanderye.cn/"
         },
         {
-          name: "QNAP",
-          image: "img/qnap.png",
+          name: "DSM",
+          image: "img/dsm.png",
           link: "https://nas.xanderye.cn:5001/"
         },
         {
